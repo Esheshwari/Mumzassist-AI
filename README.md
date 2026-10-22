@@ -1,4 +1,4 @@
-# MumzAssist.A — Multilingual AI Customer Support Triage System
+# MumzAssist.A - Multilingual AI Customer Support Triage System
 
 **MumzAssist.A** is a production-grade, AI-powered multilingual customer support triage and response-assistance platform designed for support teams handling customer inquiries across **English**, **Hindi** (Devanagari script & Latin-script Hinglish), and **Arabic** (full right-to-left layout and bidirectional isolation).
 
@@ -38,13 +38,13 @@
 
 The normalized PostgreSQL schema is located in `server/db/schema.sql` and includes:
 
-1. `customers` — Customer contact references, preferred language, and timestamps.
-2. `knowledge_base_articles` — Verified policies with multilingual content, category tagging, keywords, and active flags.
-3. `agents` — Support specialists and role assignments.
-4. `tickets` — Ticket records with unique IDs (`TIK-xxxx`), original message, language, category, priority, sentiment, status, suggested response, and timestamps.
-5. `ticket_analyses` — Historical snapshot of every AI triage run (intent, confidence, extracted entities, recommended actions).
-6. `ticket_article_references` — Relational link between tickets and cited knowledge-base articles.
-7. `ticket_events` — Audit trail recording every status change, triage run, response approval, or escalation.
+1. `customers` - Customer contact references, preferred language, and timestamps.
+2. `knowledge_base_articles` - Verified policies with multilingual content, category tagging, keywords, and active flags.
+3. `agents` - Support specialists and role assignments.
+4. `tickets` - Ticket records with unique IDs (`TIK-xxxx`), original message, language, category, priority, sentiment, status, suggested response, and timestamps.
+5. `ticket_analyses` - Historical snapshot of every AI triage run (intent, confidence, extracted entities, recommended actions).
+6. `ticket_article_references` - Relational link between tickets and cited knowledge-base articles.
+7. `ticket_events` - Audit trail recording every status change, triage run, response approval, or escalation.
 
 ---
 
@@ -108,21 +108,9 @@ Open `http://localhost:3000` to access MumzAssist.A.
 
 ---
 
-## 7. Vercel Deployment Instructions
+## 7. Deployment
 
-1. **Deploy to Vercel:**
-   Connect your GitHub repository to Vercel. Set the framework to **Vite / Node.js** (or use the Express server entry point).
-2. **Environment Variables on Vercel:**
-   Configure the following in your Vercel Project Settings:
-   - `DATABASE_URL`: Hosted PostgreSQL connection string (from Neon, Supabase, or Vercel Postgres).
-   - `GEMINI_API_KEY`: Your Google Gemini API key.
-   - `NODE_ENV`: `production`.
-3. **Build Command:**
-   ```bash
-   npm run build
-   ```
-4. **Health Check Endpoint:**
-   Verify your deployment via:
-   ```http
-   GET https://your-deployment-domain.vercel.app/api/health
-   ```
+**Deployed on Vercel:**
+
+mumzassist-ai.vercel.app
+   
