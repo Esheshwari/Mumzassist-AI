@@ -1,0 +1,6 @@
+{
+  "name": "MumzAssist.A",
+  "description": "Multilingual AI Customer Support Triage and Response Assistance Platform for English, Hindi, and Arabic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
